@@ -117,7 +117,7 @@ const Navbar = () => {
                                         </li>
                                         <li><a>Settings</a></li>
                                         <li><button onClick={() => {
-                                            navigate('/login')
+                                            navigate('/')
                                             localStorage.clear()
                                             location.reload()
                                         }}>Logout</button></li>
