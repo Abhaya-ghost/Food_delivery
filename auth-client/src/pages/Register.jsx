@@ -62,11 +62,11 @@ const Register = () => {
   }
 
   return (
-    <div className="register">
+    <div className="register mb-5">
       <div className="w-full mx-auto pt-[16vh]">
         <form className="ease-in duration-300 w-[80%] sm:w-max shadow-sm backdrop-blur-md bg-white/80 lg:w-max mx-auto  rounded-md px-8 py-5" onSubmit={handleOnSubmit}>
           <label htmlFor="file-upload" className="custom-file-upload">
-            <img src={image?.url || avatar} alt="" className='h-32 w-32 bg-contain rounded-full mx-auto cursor-pointer' />
+            <img src={image?.url || avatar} alt="" className='w-[5rem] h-[5rem] bg-contain rounded-full mx-auto cursor-pointer' />
           </label>
           <label htmlFor="" className='block text-center text-gray-900 text-base mb-2'>Profile Picture</label>
           <input type="file" label="Image" onChange={handleImage} name='myFile' id='file-upload' className='hidden' accept='.jpeg, .png, .jpg' />

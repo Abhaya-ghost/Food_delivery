@@ -37,7 +37,8 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        if(!user){
+        const token = localStorage.getItem('token')
+        if(!user && token){
             getUser()
         }
     }, [])

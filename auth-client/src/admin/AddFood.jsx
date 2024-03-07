@@ -57,7 +57,7 @@ const AddFood = () => {
             <div className="w-full mx-auto pt-[16vh]">
                 <form className="ease-in duration-300 w-[80%] sm:w-max shadow-sm backdrop-blur-md bg-white/80 lg:w-max mx-auto  rounded-md px-8 py-5" onSubmit={handleSubmit}>
                     <NavLink to='/'>
-                        <img src={logo} alt="" className='logo mx-auto mb-6 cursor-pointer text-center' />
+                        <img src={logo} alt="" className='logo mx-auto mb-6 cursor-pointer text-center w-[5rem] h-[5rem]' />
                     </NavLink>
                     <div className="md:grid md:grid-cols-1 sm:grid-cols-2 gap-4 items-center">
 

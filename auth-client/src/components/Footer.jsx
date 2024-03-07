@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-red-200/30 text-base">
             <aside>
-                <img src={logo} alt="" />
+                <img src={logo} alt="" className='w-[10rem] h-[10rem]'/>
             </aside>
             <nav>
                 <h6 className="footer-title text-xl text-[#f54748]">Services</h6>

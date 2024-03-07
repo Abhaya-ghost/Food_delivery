@@ -19,8 +19,8 @@ const createOrder = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: 'http://localhost:5173/success',
-            cancel_url: 'http://localhost:5173/cancel'
+            success_url: 'https://food-delivery-lovat-chi.vercel.app/success',
+            cancel_url: 'https://food-delivery-lovat-chi.vercel.app/cancel'
         })
 
         if (session.id) {

@@ -42,7 +42,7 @@ const Login = () => {
       <div className="h-screen pt-[16vh]">
         <form className="ease-in duration-300 w-[80%] sm:w-max shadow-sm backdrop-blur-md bg-white/80 lg:w-max mx-auto flex flex-col items-center rounded-md px-8 py-5" onSubmit={handleOnSubmit}>
           <NavLink to='/'>
-            <img src={logo} alt="" className='logo mb-6 cursor-pointer text-center' />
+            <img src={logo} alt="" className='logo mb-6 cursor-pointer text-center w-[5rem] h-[5rem]' />
           </NavLink>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 text-sm mb-2">
