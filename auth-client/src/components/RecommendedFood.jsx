@@ -8,7 +8,7 @@ const RecommendedFood = () => {
     const { food, setFood } = useFoodContext()
     const getFoods = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/food/getTopRated`)
+            const res = await axios.get(`https://tikkantalk.onrender.com/api/v1/food/getTopRated`)
             if (res.data.success) {
                 setTopFood(res.data.data.food)
             }

@@ -17,7 +17,7 @@ const Navbar = () => {
     }
     const getUser = async () => {
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/user/getUser', {
+            const res = await axios.post('https://tikkantalk.onrender.com/api/v1/user/getUser', {
                 token : localStorage.getItem('token')
             }, {
                 headers : {

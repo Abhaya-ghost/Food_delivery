@@ -18,7 +18,7 @@ const Register = () => {
     formData.append('image', file)
     setUploading(true)
     try {
-      const {data} = await axios.post('http://localhost:8000/api/v1/all/upload-image', formData)
+      const {data} = await axios.post('https://tikkantalk.onrender.com/api/v1/all/upload-image', formData)
       console.log(data)
       setUploading(false)
       setImage({
@@ -40,7 +40,7 @@ const Register = () => {
     const profileImg = image?.url
     const userData = {name, email, password, confirmPassword, profileImg}
 
-    fetch('http://localhost:8000/api/v1/user/register', {
+    fetch('https://tikkantalk.onrender.com/api/v1/user/register', {
       method : 'POST',
       headers : {
         'content-type' : 'application/json'

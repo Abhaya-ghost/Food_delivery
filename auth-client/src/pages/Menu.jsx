@@ -50,7 +50,7 @@ const Menu = () => {
 
   const getFoods = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/food/getAllFoods?category=${value}`)
+      const res = await axios.get(`https://tikkantalk.onrender.com/api/v1/food/getAllFoods?category=${value}`)
       if (res.data.success) {
         setFood(res.data.data.food)
       }

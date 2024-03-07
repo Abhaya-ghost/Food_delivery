@@ -16,7 +16,7 @@ const Login = () => {
     const password = form.password.value
     const userData = { email, password }
 
-    fetch('http://localhost:8000/api/v1/user/login', {
+    fetch('https://tikkantalk.onrender.com/api/v1/user/login', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

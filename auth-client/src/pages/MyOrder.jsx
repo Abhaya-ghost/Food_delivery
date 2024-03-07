@@ -12,7 +12,7 @@ const MyOrder = () => {
 
     const getMyOrders = async (id) => {
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/order/getOrder', {
+            const res = await axios.post('https://tikkantalk.onrender.com/api/v1/order/getOrder', {
                 userId: user?.user._id,
                 token: localStorage.getItem('token')
             }, {
@@ -20,7 +20,6 @@ const MyOrder = () => {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             })
-            console.log(res.data)
 
             if (res.data.success) {
                 setOrders(res.data.data)

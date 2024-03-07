@@ -25,7 +25,7 @@ const Order = () => {
                 food : item._id,
                 qty : item.qty,
             }))
-            const res = await axios.post('http://localhost:8000/api/v1/order/createOrder', {
+            const res = await axios.post('https://tikkantalk.onrender.com/api/v1/order/createOrder', {
                 user : user?.user._id,
                 items : orderItems,
                 totalAmount : totalPrice,

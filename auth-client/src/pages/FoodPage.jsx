@@ -15,7 +15,7 @@ const FoodPage = () => {
     const {addToCart} = useCartContext()
     const getFoodDetails = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/food/getFood/${params.id}`)
+            const res = await axios.get(`https://tikkantalk.onrender.com/api/v1/food/getFood/${params.id}`)
             if (res.data.success) {
                 setFoodDetails(res.data.data.food)
             }

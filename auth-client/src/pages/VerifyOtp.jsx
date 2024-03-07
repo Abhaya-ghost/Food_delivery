@@ -20,7 +20,7 @@ const VerifyOtp = () => {
         const email = user?.user?.email
         const dataOtp = {email, combineOtp}
 
-        fetch('http://localhost:8000/api/v1/user/verifyOtp', {
+        fetch('https://tikkantalk.onrender.com/api/v1/user/verifyOtp', {
           method : 'POST',
           headers : {
             'content-type' : 'application/json'

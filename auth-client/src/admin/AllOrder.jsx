@@ -9,7 +9,7 @@ const AllOrder = () => {
 
     const getAllOrders = async (id) => {
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/order/getOrders', {
+            const res = await axios.post('https://tikkantalk.onrender.com/api/v1/order/getOrders', {
                 userId: user?.user._id,
                 token: localStorage.getItem('token')
             }, {
@@ -17,8 +17,6 @@ const AllOrder = () => {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             })
-            console.log(res.data)
-
             if (res.data.success) {
                 setOrders(res.data.data)
             } else {
@@ -62,11 +60,7 @@ const AllOrder = () => {
                             </h3>
                         </div>
                         {
-                            orders?.map((order) => {
-                                return (
-                                    <CartFood key={order._id} order={order} />
-                                )
-                            })
+                            orders?.map((order) => <CartFood key={order._id} order={order} />)
                         }
                     </div>
                 </div>
@@ -81,7 +75,7 @@ const CartFood = ({ order }) => {
     const { user, setUser } = useUserContext()
     const handleDelivered = async (id) => {
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/order/delivered', {
+            const res = await axios.post('https://tikkantalk.onrender.com/api/v1/order/delivered', {
                 userId: user?.user._id,
                 orderId: id,
                 token: localStorage.getItem('token')

@@ -16,7 +16,7 @@ const AddFood = () => {
         formData.append('image', file)
         setUploading(true)
         try {
-            const { data } = await axios.post('http://localhost:8000/api/v1/all/upload-image', formData)
+            const { data } = await axios.post('https://tikkantalk.onrender.com/api/v1/all/upload-image', formData)
             setUploading(false)
             setImage({
                 url: data.url,
@@ -41,7 +41,7 @@ const AddFood = () => {
         const description = form.description.value
         const foodImg = image?.url
 
-        const res = await axios.post('http://localhost:8000/api/v1/food/addfood', {name, price, category, weight, location, description, foodImg}, {
+        const res = await axios.post('https://tikkantalk.onrender.com/api/v1/food/addfood', {name, price, category, weight, location, description, foodImg}, {
             headers : {
                 Authorization : `Bearer ${localStorage.getItem('token')}`
             }
