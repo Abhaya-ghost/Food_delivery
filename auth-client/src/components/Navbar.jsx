@@ -60,7 +60,7 @@ const Navbar = () => {
                         <img src={logo} alt="" className='h-14 cursor-pointer' />
                     </Link>
                     <div className="lg:flex hidden gap-8 items-center">
-                        <a href="" className="text-[#191919] text-xl font-medium hover:text-red-500">Today's Special</a>
+                        <Link to="/" className="text-[#191919] text-xl font-medium hover:text-red-500">Today's Special</Link>
                         {
                             user && <Link to='/myOrder' className="text-[#191919] text-xl font-medium hover:text-red-500">My Order</Link>
                         }
@@ -68,7 +68,7 @@ const Navbar = () => {
                         {
                             user?.user?.role === 'admin' && <Link to='/addfood' className="text-[#191919] text-xl font-medium hover:text-red-500">Add Food</Link>
                         }
-                        <a href="" className="text-[#191919] text-xl font-medium hover:text-red-500">Popular Food</a>
+                        <Link to="/" className="text-[#191919] text-xl font-medium hover:text-red-500">Popular Food</Link>
                         {
                             user && (
                                 <div className="dropdown dropdown-end">
